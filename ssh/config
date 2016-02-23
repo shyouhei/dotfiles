@@ -1,0 +1,8 @@
+Host *
+     User urabe.shohei
+     UseRoaming no
+     ControlMaster auto
+     ControlPath /Users/urabe.shyouhei/.ssh/[ControlMaster]%r@%h:%p
+     ControlPersist 300
+     Protocol 2
+     ServerAliveInterval 128
