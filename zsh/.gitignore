@@ -1,0 +1,5 @@
+# hist file can contain sensitive info
+.zsh_history
+
+# compinit cache file no need to manage
+.zcompdump
