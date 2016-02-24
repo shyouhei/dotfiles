@@ -1,0 +1,5 @@
+#! /bin/zsh
+# this file contains minimal setup to reroute zshrc files into XDG home
+
+typeset -gr ZDOTDIR=~/data/etc/zsh
+
