@@ -1,0 +1,42 @@
+#! /bin/zsh
+
+  setopt auto_cd
+  setopt auto_menu
+  setopt auto_param_keys
+  setopt auto_param_slash
+  setopt auto_pushd
+  setopt chase_links
+  setopt complete_in_word
+  setopt correct_all
+  setopt extended_glob
+  setopt extended_history
+  setopt glob_complete
+unsetopt glob_dots
+  setopt hist_expand
+  setopt hist_ignore_all_dups
+  setopt hist_ignore_space
+  setopt hist_save_nodups
+  setopt hist_verify
+  setopt ignoreeof
+  setopt inc_append_history
+  setopt list_ambiguous
+unsetopt list_beep
+  setopt list_types
+  setopt listpacked
+  setopt long_list_jobs
+  setopt magic_equal_subst
+  setopt mark_dirs
+unsetopt no_bang_hist
+  setopt no_complete_aliases
+  setopt no_flow_control
+unsetopt no_hup
+  setopt numeric_glob_sort
+  setopt print_eight_bit
+  setopt print_exit_value
+  setopt prompt_cr
+  setopt prompt_percent
+# setopt prompt_sp # this is default on
+  setopt prompt_subst
+  setopt prompt_subst
+  setopt share_history
+  setopt transient_rprompt
