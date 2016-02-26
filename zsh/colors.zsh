@@ -6,8 +6,7 @@ function() {
 
     autoload -Uz is-at-least
 
-    has_a dircolors && eval `dircolors $ZDOTDIR/../dircolors`
-
+    has_a dircolors && eval $(dircolors $ZDOTDIR/../dircolors)
 
     if has_a gls; then
 	typeset -gx LS_COLORS=${LS_COLORS:-$ls_colors}
@@ -23,9 +22,9 @@ function() {
     if has_a pcregrep; then
 	alias grep='pcregrep --color=auto'
     elif is-at-least 2.5 `\grep --version | \grep -Eo '([0-9]+\.)+[0-9]+'`; then
-	alias grep='grep --color=auto'
+	typeset -gx GREP_OPTIONS="$GREP_OPTIONS --color=auto"
     fi
 
-    has_a lv   && alias lv='lv -c'
-    has_a less && alias less='less --raw-control-chars' # or less --RAW-COMTROL-CHARS
+    has_a lv   && typeset -gx LV="-c $LV"
+    has_a less && typeset -gx LESS="--raw-control-chars $LESS" # or --RAW-COMTROL-CHARS
 }
