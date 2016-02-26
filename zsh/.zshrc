@@ -10,6 +10,7 @@
     }
 
     source $ZDOTDIR/zplug.zsh       # should be the very first
+    source $ZDOTDIR/bindkey.zsh
     source $ZDOTDIR/setopts.zsh
     source $ZDOTDIR/exports.zsh     # has PATH setting, should load early
     source $ZDOTDIR/colors.zsh      # depends exports(PATH)
