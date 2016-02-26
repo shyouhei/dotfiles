@@ -1,13 +1,13 @@
 #! /bin/zsh
 
 {
+    # zmodload zsh/zprof # uncomment this line to enable profiling
+
     # utility function, volatile to this invocation
     function has_a() {
 	whence "$@" >/dev/null 2>&1
 	return $?
     }
-
-    # zmodload zsh/zprof # uncomment this line to enable profiling
 
     source $ZDOTDIR/zplug.zsh       # should be the very first
     source $ZDOTDIR/setopts.zsh

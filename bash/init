@@ -1,0 +1,6 @@
+#! /bin/bash
+# minimal setup, .bashrc/.bash_profile/.bash_login are symlinks to this file.
+
+export XDG_CONFIG_HOME=~/data/etc
+export XDG_CACHE_HOME=~/data/cache
+export XDG_DATA_HOME=~/data/share
