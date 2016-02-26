@@ -10,12 +10,13 @@ function() {
     zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
     zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|[._-]=*'
   # zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-    zstyle ':completion:*' format '%B%d%b'
+    zstyle ':completion:*' format "$reset_color$bold_color%d$reset_color"
     zstyle ':completion:*' keep-prefix
     zstyle ':completion:*' recent-dirs-insert both
     zstyle ':completion:*' group-name ''
     zstyle ':completion:*' use-cache yes
     zstyle ':completion:*' verbose yes
+    zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
     zstyle ':completion:*:default' menu select true
     zstyle ':completion:sudo:*' environ PATH="$SUDO_PATH:$PATH"
 
