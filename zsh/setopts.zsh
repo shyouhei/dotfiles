@@ -38,5 +38,6 @@ unsetopt no_hup
 # setopt prompt_sp # this is default on
   setopt prompt_subst
   setopt prompt_subst
+  setopt re_match_pcre
   setopt share_history
   setopt transient_rprompt

@@ -25,3 +25,4 @@ zplug zsh-users/zaw, nice:10
 zplug mrowa44/emojify, as:command, of:emojify
 zplug djui/alias-tips
 zplug willghatch/zsh-cdr
+zplug Tarrasch/zsh-functional

@@ -1,9 +1,14 @@
 #! /bin/zsh
 
 function() {
-    local editor pager
+    typeset -Ua editors=(nvim vim vi emacs nano)
+    typeset -Ua pagers=(lv less w3m more)
+
+    # grab default $PATH
+    has_a /usr/libexec/path_helper && eval $(env -i PATH=$PATH MANPATH=$MANPATH /usr/libexec/path_helper)
 
     # (N-/) is handy so $path is set instead of $PATH
+    # /sbin etc. are filtered out later.
     typeset -gUa path=(
 	$HOME/bin(N-/)
 	/usr/texbin(N-/)
@@ -17,16 +22,18 @@ function() {
 	/usr/bin
 	/usr/games(N-/)
 	/bin
-	$path
-    )
-
-    typeset -gxT SUDO_PATH sudo_path
-    typeset -gUa sudo_path=(
 	/usr/local/sbin(N-/)
 	/usr/pkg/sbin(N-/)
 	/usr/sbin
 	/sbin
+	$path
     )
+    local sbins=$(filter '[[ $1 =~ sbin ]]' $path | map '$1:A')
+    local bins=$(filter '[[ ! $1 =~ sbin ]]' $path | map '$1:A')
+
+    typeset -gxT SUDO_PATH sudo_path
+    typeset -gUa sudo_path=(${(f)sbins})
+    path=(${(f)bins})
 
     typeset -gUa manpath=(
          /opt/local/share/man(N-/)
@@ -37,20 +44,8 @@ function() {
 	 $manpath
     )
 
-    for editor in vim vi emacs nano; do
-	if has_a $editor; then
-	    typeset -gx EDITOR=$editor
-	    break
-	fi
-    done
-
-    for pager in lv less w3m more; do
-	if has_a $pager; then
-	   typeset -gx PAGER=$pager
-	   break
-	fi
-    done
-
+    typeset -gx EDITOR=$(filter 'has_a $@' $editors | head -n1)
+    typeset -gx PAGER=$(filter 'has_a $@' $pagers | head -n1)
     typeset -gx CVS_RSH=ssh
 }
 
