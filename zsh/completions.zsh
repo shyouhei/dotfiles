@@ -19,7 +19,9 @@ function() {
     zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
     zstyle ':completion:*:default' menu select true
     zstyle ':completion:sudo:*' environ PATH="$SUDO_PATH:$PATH"
-
+    zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#' '*.swp'
+    zstyle ':completion:*:cd:*' ignore-parents parent pwd
+    zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
     #compdef _man w3mman
 
     autoload -Uz history-search-end
