@@ -18,6 +18,7 @@
     source $ZDOTDIR/completions.zsh # depends colors(LS_COLORS)
     source $ZDOTDIR/functions.zsh
     source $ZDOTDIR/helps.zsh
+    source $ZDOTDIR/histories.zsh
     source $ZDOTDIR/screen.zsh      # depends zplug(compinit)
     source $ZDOTDIR/predict-on.zsh
     source $ZDOTDIR/prompt.zsh
