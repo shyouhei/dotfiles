@@ -16,6 +16,7 @@
     source $ZDOTDIR/XDG.zsh
     source $ZDOTDIR/colors.zsh      # depends exports(PATH)
     source $ZDOTDIR/completions.zsh # depends colors(LS_COLORS)
+    source $ZDOTDIR/functions.zsh
     source $ZDOTDIR/helps.zsh
     source $ZDOTDIR/screen.zsh      # depends zplug(compinit)
     source $ZDOTDIR/predict-on.zsh
