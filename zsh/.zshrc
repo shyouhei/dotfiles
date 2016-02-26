@@ -13,13 +13,16 @@
     source $ZDOTDIR/bindkey.zsh
     source $ZDOTDIR/setopts.zsh
     source $ZDOTDIR/exports.zsh     # has PATH setting, should load early
+    source $ZDOTDIR/XDG.zsh
     source $ZDOTDIR/colors.zsh      # depends exports(PATH)
     source $ZDOTDIR/completions.zsh # depends colors(LS_COLORS)
     source $ZDOTDIR/helps.zsh
     source $ZDOTDIR/screen.zsh      # depends zplug(compinit)
     source $ZDOTDIR/predict-on.zsh
     source $ZDOTDIR/prompt.zsh
-    source $ZDOTDIR/profiling.zsh
+    source $ZDOTDIR/rbenv.zsh
+    source $ZDOTDIR/perlbrew.zsh
+    source $ZDOTDIR/profiling.zsh   # should be the very last
 
 } always {
 
