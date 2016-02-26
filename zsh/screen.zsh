@@ -32,16 +32,15 @@ function() {
 
     compdef _env screen_fulltitle
 
-    for i in \
+    local -a commands=(
 	man info w3m \
 	htop top \
 	sudo \
 	emacs emacs-snapshot vim vi nano sudoedit \
 	scim \
 	gnuplot irb irb1.8 gosh python ghci ocaml
-    do
-	has_a $i && alias $i="screen_fulltitle $i"
-    done
+    )
+    eval $(filter 'has_a $1' $commands | map 'alias $1="screen_fulltutle $1"')
 
     # htop needs sudo
     alias htop="screen_fulltitle sudo /usr/local/bin/htop"
