@@ -16,11 +16,12 @@ function() {
     zstyle ':completion:*' group-name ''
     zstyle ':completion:*' use-cache yes
     zstyle ':completion:*' verbose yes
-    zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
+    zstyle ':completion:*' completer _oldlist _expand _complete _history _match _prefix _approximate _list _history
     zstyle ':completion:*:default' menu select true
     zstyle ':completion:sudo:*' environ PATH="$SUDO_PATH:$PATH"
     zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#' '*.swp'
     zstyle ':completion:*:cd:*' ignore-parents parent pwd
+    zstyle ':completion:*:*:-command-:*:*' ignored-patterns '_*'
     zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
     #compdef _man w3mman
 
