@@ -1,0 +1,6 @@
+[color]
+	ui = true
+[ghq]
+	root = ~/data/src
+[include]
+	path = ~/data/etc/git/local
