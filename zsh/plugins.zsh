@@ -18,6 +18,8 @@
 # zplug "rupa/z",          as:plugin, of:"*.sh"
 #
 zplug b4b4r07/zplug
+zplug b4b4r07/emoji-cli, if:'[[ whence jq >/dev/null ]]'
+zplug zsh-users/zsh-autosuggestions
 zplug zsh-users/zsh-completions
 zplug zsh-users/zsh-history-substring-search
 zplug zsh-users/zsh-syntax-highlighting, nice:10
@@ -26,3 +28,4 @@ zplug mrowa44/emojify, as:command, of:emojify
 zplug djui/alias-tips
 zplug willghatch/zsh-cdr
 zplug Tarrasch/zsh-functional
+zplug $ZDOTDIR/functions, from:local

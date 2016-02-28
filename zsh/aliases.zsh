@@ -9,7 +9,3 @@ alias zln='noglob zmv -W -L'
 # vim-ish
 alias :q='exit'
 alias :e=$EDITOR
-
-function mkcd() {
-    mkdir -p $@ && cd $@
-}
