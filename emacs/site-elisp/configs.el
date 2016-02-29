@@ -1,3 +1,10 @@
+;; custom
+(setq custom-file (expand-file-name "~/.emacs.d/elisp/custom.el"))
+
+;; whoami
+(setq user-full-name "URABE Shyouhei")
+(setq user-mail-address "shyouhei@ruby-lang.org")
+
 (setq global-mode-string nil)
 (setq frame-title-format
       '("-%z:%*%+  %b  "
@@ -39,6 +46,11 @@
 
 ;; transient-mark
 (setq transient-mark-mode t)
+
+(electric-pair-mode t)
+(electric-layout-mode t)
+(add-to-list 'electric-pair-pairs '(?| . ?|)) ;; for ruby
+
 
 (setq search-highlight t)
 (setq query-replace-highlight t)
@@ -146,13 +158,6 @@
 
 
 (global-set-key "\C-h" 'delete-backward-char)
-
-;; custom
-(setq custom-file (expand-file-name "~/.emacs.d/elisp/custom.el"))
-
-;; whoami
-(setq user-full-name "URABE Shyouhei")
-(setq user-mail-address "shyouhei@ruby-lang.org")
 
 (if window-system
     (progn

@@ -1,4 +1,5 @@
-abbrev_defs/
+abbrev_defs
 auto-saves-alist/
 backups/
 elpa/
+recentf

@@ -26,6 +26,9 @@
 
 (package-install 'ruby-mode)
 (package-install 'yard-mode)
+(package-install 'rbenv)
+(package-install 'ruby-block)
+(package-install 'ruby-end)
 (use-package ruby-mode
   :interpreter "ruby"
 
@@ -47,7 +50,15 @@
       :init
       (progn
 	(add-hook 'ruby-mode-hook 'yard-mode)
-	(add-hook 'ruby-mode-hook 'eldoc-mode)))))
+	(add-hook 'ruby-mode-hook 'eldoc-mode)))
+    (use-package rbenv-mode
+      :config
+      (progn
+	(setq rbenv-installation-dir "~/data/etc/rbenv")
+	(global-rbenv-mode)))
+    (use-package ruby-end)
+    (use-package ruby-block :config (setq ruby-block-highlight-toggle t))))
+
 
 (package-install 'perl-mode)
 (use-package perl-mode
@@ -153,6 +164,17 @@
   (progn
     (show-paren-mode t)
     (paren-activate)))
+
+(package-install 'helm)
+(use-package helm
+  :ensure t
+  :diminish "helm"
+  :init
+  (progn
+    (require 'helm-config)
+    (helm-mode 1)
+    (define-key helm-map (kbd "C-h") 'delete-backward-char)
+    (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)))
 
 ;; Emacs built-in
 (use-package windmove
