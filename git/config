@@ -1,6 +1,22 @@
-[color]
-	ui = true
-[ghq]
-	root = ~/data/src
 [include]
-	path = ~/data/etc/git/local
+        path = ~/data/etc/git/local
+[core]
+        editor = vim
+        precomposeunicode = true
+        quotepath = true
+[push]
+        # simple,matching,upstream,current
+        default = simple
+[color]
+        ui = auto
+        status = auto
+        diff = auto
+        branch = auto
+        interactive = auto
+        grep = auto
+[diff]
+        patience = true
+[help]
+        autocorrect = 30
+[ghq]
+        root = ~/data/src
