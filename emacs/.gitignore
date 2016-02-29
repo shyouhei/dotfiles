@@ -1,1 +1,4 @@
-auto-saves-alist
+abbrev_defs/
+auto-saves-alist/
+backups/
+elpa/
