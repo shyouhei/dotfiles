@@ -28,4 +28,4 @@ zplug mrowa44/emojify, as:command, of:emojify
 zplug djui/alias-tips
 zplug willghatch/zsh-cdr
 zplug Tarrasch/zsh-functional
-zplug $ZDOTDIR/functions, from:local
+zplug "$ZDOTDIR/functions", from:local
