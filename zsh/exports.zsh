@@ -36,6 +36,7 @@ function() {
     path=(${(f)bins})
 
     typeset -gUa manpath=(
+	 /usr/local/opt/*/libexec/gnuman(N-/)
          /opt/local/share/man(N-/)
          /opt/csw/share/man(N-/)
          /usr/sfw/share/man(N-/)
