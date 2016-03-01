@@ -1,0 +1,3 @@
+# -*- mode: ruby; coding: utf-8 -*-
+Pry.config.history.should_save = false
+Pry.config.history.file = "#{ENV['XDG_CONFIG_HOME']}/pry/history"
