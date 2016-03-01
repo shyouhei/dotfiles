@@ -11,6 +11,7 @@ function() {
     # /sbin etc. are filtered out later.
     typeset -gUa path=(
 	$HOME/bin(N-/)
+	$HOME/Library/Python/*/bin(N-/)
 	/usr/texbin(N-/)
 	/opt/local/bin(N-/)
 	/opt/csw/bin(N-/)

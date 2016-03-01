@@ -53,5 +53,17 @@ function () {
     typeset -g PROMPT2="${start}zsh ${caution}>${end} "
     typeset -g RPROMPT2="${start}< %U%1_%u%(2_| ...|)${end}"
     typeset -g SPROMPT="${start}zsh: replace '%B%R%b' to '%B%r%b' ? [%Uy%ues/%Un%uo/%Ua%ubort/%Ue%udit] :${end} "
-    typeset -g RPROMPT=`printf "%s%%(!\n%s\n%s)%s" "$start" "$root" "$others" "$end"`
+    typeset -g RPROMPT=$(printf "%s%%(!\n%s\n%s)%s" "$start" "$root" "$others" "$end")
 }
+
+# function {
+#     has_a powerline-daemon || return
+#     local pip_root=$(
+# 	pip show powerline-status 2>/dev/null |
+# 	    fgrep -i location |
+# 	    awk '{ print $2 }'
+#     )
+
+#     powerline-daemon -q
+#     source $pip_root/powerline/bindings/zsh/powerline.zsh
+# }
