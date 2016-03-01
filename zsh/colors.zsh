@@ -6,7 +6,7 @@ function() {
 
     autoload -Uz is-at-least
 
-    has_a dircolors && eval $(dircolors $ZDOTDIR/../dircolors)
+    has_a dircolors && eval $(dircolors $ZDOTDIR/../dircolors/config)
 
     if has_a gls; then
 	typeset -gx LS_COLORS=${LS_COLORS:-$ls_colors}
