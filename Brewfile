@@ -96,3 +96,11 @@ brew 'wireshark'
 
 brew 'sanemat/font/ricty', args: ['powerline']
 brew 'reattach-to-user-namespace'
+
+brew 'homebrew/versions/gcc49'
+brew 'homebrew/versions/gcc5'
+brew 'homebrew/versions/gcc6'
+brew 'llvm'
+brew 'homebrew/versions/llvm35'
+brew 'homebrew/versions/llvm36'
+brew 'homebrew/versions/llvm37'
