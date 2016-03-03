@@ -5,7 +5,7 @@ function() {
 
     eval "$(rbenv init - zsh)"
     path=(
-	$path
-	$HOME/.rbenv/plugins/ruby-build/bin(N-/)
+        $path
+        $HOME/.rbenv/plugins/ruby-build/bin(N-/)
     )
 }

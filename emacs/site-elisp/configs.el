@@ -8,12 +8,12 @@
 (setq global-mode-string nil)
 (setq frame-title-format
       '("-%z:%*%+  %b  "
-	mode-line-modes
-	which-func-format
-	"--"
-	invocation-name
-	"@"
-	system-name))
+        mode-line-modes
+        which-func-format
+        "--"
+        invocation-name
+        "@"
+        system-name))
 
 (which-func-mode)
 
@@ -122,7 +122,7 @@
 ;; No more bobcat, no more keyswap!
 (cond ((eq window-system 'x)
        (progn
-	 (global-set-key [delete] 'delete-char)))
+         (global-set-key [delete] 'delete-char)))
       ((eq window-system 'mac)
        t) ;; ok
       (t (keyboard-translate ?\C-h ?\C-?)))
@@ -164,14 +164,14 @@
       (set-face-attribute 'default nil :family "Ricty" :height 140)
       (set-fontset-font "fontset-default" 'japanese-jisx0208 '("Ricty" . "iso10646-*"))
       (setq default-frame-alist
-	    (append
-	     (list '(foreground-color . "black")
-		   '(background-color . "alice blue")
-		   '(border-color . "azure")
-		   '(cursor-color . "black")
-		   '(mouse-color . "orange")
-		   '(vertical-scroll-bars . nil)
-		   ;; '(alpha . 65)
-		   )
-	     default-frame-alist))
+            (append
+             (list '(foreground-color . "black")
+                   '(background-color . "alice blue")
+                   '(border-color . "azure")
+                   '(cursor-color . "black")
+                   '(mouse-color . "orange")
+                   '(vertical-scroll-bars . nil)
+                   ;; '(alpha . 65)
+                   )
+             default-frame-alist))
       ))

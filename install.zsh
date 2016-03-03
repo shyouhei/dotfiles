@@ -3,20 +3,20 @@
 function check {
     local target=$1
     if [[ -x $target ]]; then
-	echo "$target exists; bailing out"
-	exit 1
+        echo "$target exists; bailing out"
+        exit 1
     fi
 }
 
 function link {
     if [[ $1 == $2 ]]; then
-	return # skip
+        return # skip
     elif [[ ! -e $2 ]]; then
-	ln -sf $@
+        ln -sf $@
     elif [[ -L $2 ]]; then
-	ln -sf $@ # silent overwrite
+        ln -sf $@ # silent overwrite
     else
-	abort "$2 exists; aborting"
+        abort "$2 exists; aborting"
     fi
 }
 

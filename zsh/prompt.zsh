@@ -8,11 +8,11 @@ function _precmd_hardstatus () {
 #       print -Pn "\e]0;%n@%m:%48<...<%~\a"
         vcs_info
         if [ ! -z ${vcs_info_msg_0_} ]
-	then
-	    print -Pn "\${vcs_info_msg_1_}\${vcs_info_msg_2_}\a"
-	else
+        then
+            print -Pn "\${vcs_info_msg_1_}\${vcs_info_msg_2_}\a"
+        else
             print -Pn ":%64<...<%~\a"
-	fi
+        fi
     ;;
     esac
 }
@@ -59,9 +59,9 @@ function () {
 # function {
 #     has_a powerline-daemon || return
 #     local pip_root=$(
-# 	pip show powerline-status 2>/dev/null |
-# 	    fgrep -i location |
-# 	    awk '{ print $2 }'
+#       pip show powerline-status 2>/dev/null |
+#           fgrep -i location |
+#           awk '{ print $2 }'
 #     )
 
 #     powerline-daemon -q

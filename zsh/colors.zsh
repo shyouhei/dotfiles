@@ -9,20 +9,20 @@ function() {
     has_a dircolors && eval $(dircolors $ZDOTDIR/../dircolors/config)
 
     if has_a gls; then
-	typeset -gx LS_COLORS=${LS_COLORS:-$ls_colors}
-	alias ls='gls --color=auto'
+        typeset -gx LS_COLORS=${LS_COLORS:-$ls_colors}
+        alias ls='gls --color=auto'
     elif has_a colorls; then
-	typeset -gx LSCOLORS="exfxcxdxbxegedabagacad"
-	alias ls='colorls -G' # for *BSD
+        typeset -gx LSCOLORS="exfxcxdxbxegedabagacad"
+        alias ls='colorls -G' # for *BSD
     elif \ls --version 2>&1 | \grep 'GNU coreutils' >/dev/null 2>&1; then
-	typeset -gx LS_COLORS=${LS_COLORS:-$ls_colors}
-	alias ls='ls --color=auto'
+        typeset -gx LS_COLORS=${LS_COLORS:-$ls_colors}
+        alias ls='ls --color=auto'
     fi
 
     if has_a pcregrep; then
-	alias grep='pcregrep --color=auto'
+        alias grep='pcregrep --color=auto'
     elif is-at-least 2.5 `\grep --version | \grep -Eo '([0-9]+\.)+[0-9]+'`; then
-	typeset -gx GREP_OPTIONS="$GREP_OPTIONS --color=auto"
+        typeset -gx GREP_OPTIONS="$GREP_OPTIONS --color=auto"
     fi
 
     has_a lv   && typeset -gx LV="-c $LV"

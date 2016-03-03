@@ -2,9 +2,9 @@
 
 function() {
     if has_a compinit; then; else
-	# compinit should have been loaded already by zplug though...
-	autoload -Uz compinit
-	compinit
+        # compinit should have been loaded already by zplug though...
+        autoload -Uz compinit
+        compinit
     fi
 
     zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}

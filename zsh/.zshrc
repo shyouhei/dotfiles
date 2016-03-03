@@ -5,8 +5,8 @@
 
     # utility function, volatile to this invocation
     function has_a() {
-	whence "$@" >/dev/null 2>&1
-	return $?
+        whence "$@" >/dev/null 2>&1
+        return $?
     }
 
     source $ZDOTDIR/zplug.zsh       # should be the very first

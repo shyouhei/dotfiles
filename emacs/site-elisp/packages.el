@@ -49,13 +49,13 @@
       :defer t
       :init
       (progn
-	(add-hook 'ruby-mode-hook 'yard-mode)
-	(add-hook 'ruby-mode-hook 'eldoc-mode)))
+        (add-hook 'ruby-mode-hook 'yard-mode)
+        (add-hook 'ruby-mode-hook 'eldoc-mode)))
     (use-package rbenv-mode
       :config
       (progn
-	(setq rbenv-installation-dir "~/data/etc/rbenv")
-	(global-rbenv-mode)))
+        (setq rbenv-installation-dir "~/data/etc/rbenv")
+        (global-rbenv-mode)))
     (use-package ruby-end)
     (use-package ruby-block :config (setq ruby-block-highlight-toggle t))))
 
@@ -197,7 +197,7 @@
     (defun display-ansi-colors ()
       (interactive)
       (let ((inhibit-read-only t))
-	(ansi-color-apply-on-region (point-min) (point-max))))))
+        (ansi-color-apply-on-region (point-min) (point-max))))))
 
 ;; Emacs built-in
 (use-package uniquify :config (setq uniquify-buffer-name-style 'post-forward-angle-brackets))

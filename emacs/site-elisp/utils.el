@@ -7,11 +7,11 @@
 (defmacro defun-add-hook (hookname &rest sexplist)
   "pack the sexp list into function and call add-hook"
   `(add-hook ,hookname
-	     (function (lambda () ,@sexplist))))
+             (function (lambda () ,@sexplist))))
 (defun load-p (loadlib)
   "TRY to load and not stop"
   ;; read the library with missing-ok and if not, leave a message.
   (let ((load-status (load loadlib t)))
     (or load-status
-	(message (format "failed to load %s" loadlib)))
+        (message (format "failed to load %s" loadlib)))
     load-status))

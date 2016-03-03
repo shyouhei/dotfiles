@@ -8,15 +8,15 @@ function ssh_in_screen() {
     local term host
 
     case $1 in
-	-T)
-	    term=$2
-	    host=$3
-	    shift 3
-	    ;;
-	*)
-	    host=$1
-	    shift 1
-	    ;;
+        -T)
+            term=$2
+            host=$3
+            shift 3
+            ;;
+        *)
+            host=$1
+            shift 1
+            ;;
     esac
     [[ -z $1    ]] && 1=bash
     [[ -z $term ]] && term='xterm-256color' #default
@@ -33,12 +33,12 @@ function() {
     compdef _env screen_fulltitle
 
     local -a commands=(
-	man info w3m \
-	htop top \
-	sudo \
-	emacs emacs-snapshot vim vi nano sudoedit \
-	scim \
-	gnuplot irb irb1.8 gosh python ghci ocaml
+        man info w3m \
+        htop top \
+        sudo \
+        emacs emacs-snapshot vim vi nano sudoedit \
+        scim \
+        gnuplot irb irb1.8 gosh python ghci ocaml
     )
     eval $(filter 'has_a $1' $commands | map 'alias $1="screen_fulltutle $1"')
 
