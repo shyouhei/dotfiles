@@ -95,3 +95,4 @@ brew 'imagemagick'
 brew 'wireshark'
 
 brew 'sanemat/font/ricty', args: ['powerline']
+brew 'reattach-to-user-namespace'
