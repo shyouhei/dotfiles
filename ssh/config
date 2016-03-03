@@ -2,7 +2,15 @@ Host *
      User urabe.shohei
      UseRoaming no
      ControlMaster auto
-     ControlPath /Users/urabe.shyouhei/.ssh/[ControlMaster]%r@%h:%p
+     ControlPath ~/.ssh/[ControlMaster]%r@%h:%p
      ControlPersist 300
      Protocol 2
      ServerAliveInterval 128
+
+Host ci.ruby-lang.org
+     User svn
+     IdentityFile ~/.ssh/id_ed25519
+
+Host github.com
+     User git
+     IdentityFile ~/.ssh/id_ed25519
