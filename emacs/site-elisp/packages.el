@@ -51,7 +51,7 @@
       (progn
         (add-hook 'ruby-mode-hook 'yard-mode)
         (add-hook 'ruby-mode-hook 'eldoc-mode)))
-    (use-package rbenv-mode
+    (use-package rbenv
       :config
       (progn
         (setq rbenv-installation-dir "~/data/etc/rbenv")
