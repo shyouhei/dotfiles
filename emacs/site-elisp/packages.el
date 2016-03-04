@@ -53,10 +53,8 @@
         (add-hook 'ruby-mode-hook 'yard-mode)
         (add-hook 'ruby-mode-hook 'eldoc-mode)))
     (use-package rbenv
-      :config
-      (progn
-        (setq rbenv-installation-dir "~/data/etc/rbenv")
-        (global-rbenv-mode)))
+      :init (setq rbenv-installation-dir "~/data/etc/rbenv")
+      :config (global-rbenv-mode))
     (use-package ruby-end)
     (use-package ruby-block :config (setq ruby-block-highlight-toggle t))))
 
