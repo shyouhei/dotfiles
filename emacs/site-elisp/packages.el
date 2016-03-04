@@ -177,6 +177,9 @@
     (define-key helm-map (kbd "C-h") 'delete-backward-char)
     (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)))
 
+(package-install 'company)
+(use-package company :config (add-hook 'after-init-hook 'global-company-mode))
+
 ;; Emacs built-in
 (use-package windmove
   :config
