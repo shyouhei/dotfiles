@@ -9,18 +9,17 @@
   (require 'use-package))
 
 (package-install 'use-package)
+(package-install 'diminish)
 (use-package use-package
   :init
-  (progn
-    (package-install 'diminish)
-    (use-package diminish
-      :config
-      (progn
-        (defun-add-hook 'lisp-interaction-mode-hook (setq mode-name "Lisp"))
-        (defun-add-hook 'emacs-lisp-mode-hook (setq mode-name "elisp"))
-        (defun-add-hook 'texinfo-mode-hook (setq mode-name "texi"))
-        (defun-add-hook 'change-log-mode-hook (setq mode-name "CL"))
-        (diminish 'isearch-mode)))))
+  (use-package diminish
+    :config
+    (progn
+      (defun-add-hook 'lisp-interaction-mode-hook (setq mode-name "Lisp"))
+      (defun-add-hook 'emacs-lisp-mode-hook (setq mode-name "elisp"))
+      (defun-add-hook 'texinfo-mode-hook (setq mode-name "texi"))
+      (defun-add-hook 'change-log-mode-hook (setq mode-name "CL"))
+      (diminish 'isearch-mode))))
 
 (package-install 'paradox)
 (use-package paradox :init (setq paradox-github-token t))
