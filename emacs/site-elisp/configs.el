@@ -168,5 +168,4 @@
                    '(vertical-scroll-bars . nil)
                    ;; '(alpha . 65)
                    )
-             default-frame-alist))
-      ))
+             default-frame-alist))))
