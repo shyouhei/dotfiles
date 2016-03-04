@@ -57,9 +57,6 @@
 ;;(setq isearch-lazy-highlight-initial-delay 0) ; obsolate
 (setq lazy-highlight-initial-delay 0)
 
-;; M-x woman
-(setq woman-cache-filename (expand-file-name "~/.emacs.d/woman-cache"))
-
 (setq backup-by-copying t)
 
 (setq gc-cons-threshold 1000000)

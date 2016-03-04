@@ -190,7 +190,7 @@
 (package-install 'tty-format)
 (use-package tty-format :config (add-hook 'find-file-hooks 'tty-format-guess))
 
-;; Emacs built-in
+(package-install 'ansi-color)
 (use-package ansi-color
   :mode
   (("\\.log$" . display-ansi-colors))
@@ -205,3 +205,7 @@
 
 ;; Emacs built-in
 (use-package uniquify :config (setq uniquify-buffer-name-style 'post-forward-angle-brackets))
+
+;; M-x woman
+(package-install 'woman)
+(use-package woman :config (setq woman-cache-filename (expand-file-name "~/.emacs.d/woman-cache")))
