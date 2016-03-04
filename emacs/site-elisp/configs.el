@@ -47,11 +47,6 @@
 ;; transient-mark
 (setq transient-mark-mode t)
 
-(electric-pair-mode t)
-(electric-layout-mode t)
-(add-to-list 'electric-pair-pairs '(?| . ?|)) ;; for ruby
-
-
 (setq search-highlight t)
 (setq query-replace-highlight t)
 ;;(setq isearch-lazy-highlight-initial-delay 0) ; obsolate
@@ -148,11 +143,14 @@
   (c-set-style "Stroustrup")
   (c-toggle-hungry-state 1)
   (setq indent-tabs-mode nil)
-  (setq c-basic-offset 4))
+  (setq c-basic-offset 4)
+  (electric-pair-mode t)
+  (electric-layout-mode t)
+  (add-to-list 'electric-layout-rules '(?{ . after))
+  (electric-spacing-mode))
 
 (global-set-key "\C-m" 'newline-and-indent)
 (global-set-key "\C-j" 'newline)
-
 
 (global-set-key "\C-h" 'delete-backward-char)
 

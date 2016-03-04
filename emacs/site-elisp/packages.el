@@ -28,7 +28,8 @@
 (package-install 'yard-mode)
 (package-install 'rbenv)
 (package-install 'ruby-block)
-(package-install 'ruby-end)
+(package-install 'ruby-electric)
+(package-install 'electric-spacing)
 (use-package ruby-mode
   :interpreter "ruby"
 
@@ -51,12 +52,18 @@
       (progn
         (add-hook 'ruby-mode-hook 'yard-mode)
         (add-hook 'ruby-mode-hook 'eldoc-mode)))
+    (use-package ruby-electric
+      :defer t
+      :init (defun-add-hook 'ruby-mode-hook '(ruby-electric-mode t)))
+    (use-package electric-spacing
+      :defer t
+      :init (add-hook 'ruby-mode-hook 'electric-spacing-mode))
     (use-package rbenv
       :init (setq rbenv-installation-dir "~/data/etc/rbenv")
       :config (global-rbenv-mode))
-    (use-package ruby-end)
-    (use-package ruby-block :config (setq ruby-block-highlight-toggle t))))
-
+    (use-package ruby-block
+      :commands ruby-block-mode
+      :config (setq ruby-block-highlight-toggle t))))
 
 (package-install 'perl-mode)
 (use-package perl-mode
