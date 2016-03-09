@@ -139,15 +139,15 @@
 (set-clipboard-coding-system 'utf-8-unix)
 (setq default-process-coding-system '(undecided . utf-8-unix))
 
-(dolist (h '('emacs-lisp-mode-hook
-	     'c-mode-common-hook
-	     ;'ruby-mode-hook ;; ruby-mode has ruby-electirc
-	     'perl-mode-hook
-	     'php-mode-hook
-	     'haskell-mode-hook
-	     'coffee-mode-hook
-	     'csharp-mode-hook
-	     'go-mode-hook))
+(dolist (h '(emacs-lisp-mode-hook
+	     c-mode-common-hook
+	     ;ruby-mode-hook ;; ruby-mode has ruby-electirc
+	     perl-mode-hook
+	     php-mode-hook
+	     haskell-mode-hook
+	     coffee-mode-hook
+	     csharp-mode-hook
+	     go-mode-hook))
   (add-hook h
 	    (lambda ()
 	      (electric-pair-mode t)
@@ -159,8 +159,7 @@
 	    (c-toggle-hungry-state 1)
 	    (setq indent-tabs-mode nil)
 	    (setq c-basic-offset 4)
-	    (add-to-list 'electric-layout-rules '(?{ . after))
-	    (electric-spacing-mode)))
+	    (add-to-list 'electric-layout-rules '(?{ . after))))
 
 (global-set-key "\C-m" 'newline-and-indent)
 (global-set-key "\C-j" 'newline)

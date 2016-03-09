@@ -57,7 +57,10 @@
       :init (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t))))
     (use-package electric-spacing
       :defer t
-      :init (add-hook 'ruby-mode-hook 'electric-spacing-mode))
+      :init
+      (progn
+	(add-hook 'ruby-mode-hook 'electric-spacing-mode)
+	(add-hook 'c-mode-common-hook 'electric-spacing-mode)))
     (use-package rbenv
       :init (setq rbenv-installation-dir "~/data/etc/rbenv")
       :config (global-rbenv-mode))
