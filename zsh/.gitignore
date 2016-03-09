@@ -3,6 +3,7 @@ history
 
 # compinit cache file no need to manage
 .zcompdump
+.zcompcache/
 
 # _brew is from outer repo, no need here
 functions/_brew
