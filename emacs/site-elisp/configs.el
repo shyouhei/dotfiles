@@ -79,7 +79,7 @@
 (setq next-line-add-newlines nil)
 
 (setq fill-column 79)
-(defun-add-hook 'c-mode-common-hook (auto-fill-mode 1))
+(add-hook 'c-mode-common-hook (lambda () (auto-fill-mode 1)))
 
 (setq message-log-max 200)
 
@@ -139,15 +139,16 @@
 (set-clipboard-coding-system 'utf-8-unix)
 (setq default-process-coding-system '(undecided . utf-8-unix))
 
-(defun-add-hook 'c-mode-common-hook
-  (c-set-style "Stroustrup")
-  (c-toggle-hungry-state 1)
-  (setq indent-tabs-mode nil)
-  (setq c-basic-offset 4)
-  (electric-pair-mode t)
-  (electric-layout-mode t)
-  (add-to-list 'electric-layout-rules '(?{ . after))
-  (electric-spacing-mode))
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (c-set-style "Stroustrup")
+	    (c-toggle-hungry-state 1)
+	    (setq indent-tabs-mode nil)
+	    (setq c-basic-offset 4)
+	    (electric-pair-mode t)
+	    (electric-layout-mode t)
+	    (add-to-list 'electric-layout-rules '(?{ . after))
+	    (electric-spacing-mode)))
 
 (global-set-key "\C-m" 'newline-and-indent)
 (global-set-key "\C-j" 'newline)

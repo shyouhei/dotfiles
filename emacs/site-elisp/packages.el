@@ -15,10 +15,10 @@
   (use-package diminish
     :config
     (progn
-      (defun-add-hook 'lisp-interaction-mode-hook (setq mode-name "Lisp"))
-      (defun-add-hook 'emacs-lisp-mode-hook (setq mode-name "elisp"))
-      (defun-add-hook 'texinfo-mode-hook (setq mode-name "texi"))
-      (defun-add-hook 'change-log-mode-hook (setq mode-name "CL"))
+      (add-hook 'lisp-interaction-mode-hook (lambda () (setq mode-name "Lisp")))
+      (add-hook 'emacs-lisp-mode-hook (lambda () (setq mode-name "elisp")))
+      (add-hook 'texinfo-mode-hook (lambda () (setq mode-name "texi")))
+      (add-hook 'change-log-mode-hook (lambda () (setq mode-name "CL")))
       (diminish 'isearch-mode))))
 
 (package-install 'paradox)
@@ -45,7 +45,7 @@
 
   :init
   (progn
-    (defun-add-hook 'ruby-mode-hook (auto-fill-mode 1))
+    (add-hook 'ruby-mode-hook (lambda () (auto-fill-mode 1)))
     (use-package yard-mode
       :defer t
       :init
@@ -54,7 +54,7 @@
         (add-hook 'ruby-mode-hook 'eldoc-mode)))
     (use-package ruby-electric
       :defer t
-      :init (defun-add-hook 'ruby-mode-hook '(ruby-electric-mode t)))
+      :init (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t))))
     (use-package electric-spacing
       :defer t
       :init (add-hook 'ruby-mode-hook 'electric-spacing-mode))
@@ -77,9 +77,10 @@
    ("/t/.+\\.t$" . perl-mode))
 
   :init
-  (defun-add-hook 'perl-mode-hook
-    (auto-fill-mode -1)
-    (setq indent-tabs-mode nil)))
+  (add-hook 'perl-mode-hook
+            (lambda ()
+              (auto-fill-mode -1)
+              (setq indent-tabs-mode nil))))
 
 (package-install 'php-mode)
 (use-package php-mode
@@ -87,7 +88,7 @@
 
   :mode "\\.php$"
 
-  :init (defun-add-hook 'php-mode-hook (auto-fill-mode 1)))
+  :init (add-hook 'php-mode-hook (lambda () (auto-fill-mode 1))))
 
 (package-install 'haskell-mode)
 (use-package haskell-mode
@@ -112,8 +113,9 @@
    ("\\.Cakefile$" . coffee-mode))
   
   :init
-  (defun-add-hook 'coffee-mode-hook
-    (set (make-local-variable 'tab-width) 2)))
+  (add-hook 'coffee-mode-hook
+            (lambda ()
+              (set (make-local-variable 'tab-width) 2))))
 
 (package-install 'csharp-mode)
 (use-package csharp-mode :mode "\\.cs$")
@@ -147,13 +149,14 @@
   :diminish "G"
   :init
   (progn
-    (defun-add-hook 'gtags-mode-hook
-      (local-set-key "\M-f" 'gtags-find-tag)    ; override etags
-      (local-set-key "\M-r" 'gtags-find-rtag)   ; reverse tag
-      (local-set-key "\M-s" 'gtags-find-symbol) ; find
-      (local-set-key "\C-t" 'gtags-pop-stack)); pop
+    (add-hook 'gtags-mode-hook
+              (lambda ()
+                (local-set-key "\M-f" 'gtags-find-tag)    ; override etags
+                (local-set-key "\M-r" 'gtags-find-rtag)   ; reverse tag
+                (local-set-key "\M-s" 'gtags-find-symbol) ; find
+                (local-set-key "\C-t" 'gtags-pop-stack))) ; pop
     ;; C-mode forces gtags
-    (defun-add-hook 'c-mode-common-hook (gtags-mode 1))))
+    (add-hook 'c-mode-common-hook (lambda () (gtags-mode 1)))))
 
 (package-install 'w3m)
 (use-package w3m
