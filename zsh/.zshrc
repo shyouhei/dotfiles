@@ -20,6 +20,7 @@
     source $ZDOTDIR/helps.zsh       # depends functions(fpath)
     source $ZDOTDIR/histories.zsh
     source $ZDOTDIR/screen.zsh      # depends zplug(compinit)
+    source $ZDOTDIR/tmux.zsh
     source $ZDOTDIR/predict-on.zsh
     source $ZDOTDIR/prompt.zsh
     source $ZDOTDIR/rbenv.zsh
