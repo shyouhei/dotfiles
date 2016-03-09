@@ -4,3 +4,7 @@
 export XDG_CONFIG_HOME=~/data/etc
 export XDG_CACHE_HOME=~/data/cache
 export XDG_DATA_HOME=~/data/share
+export HISTFILE=~/data/etc/bash/history
+if [ -d ~/Library/Python/*/bin ]; then
+    export PATH=$(echo ~/Library/Python/*/bin):$PATH
+fi
