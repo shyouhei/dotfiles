@@ -6,6 +6,7 @@ Host *
      ControlPersist 300
      Protocol 2
      ServerAliveInterval 128
+     HashKnownHosts yes
 
 Host ci.ruby-lang.org
      User svn

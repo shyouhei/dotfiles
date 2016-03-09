@@ -2,7 +2,7 @@
 id_*
 
 # known_hosts include private machine list
-known_hosts
+known_hosts*
 
 # config lists the way to log into private hosts
 config
