@@ -105,4 +105,6 @@ brew 'homebrew/versions/llvm35'
 brew 'homebrew/versions/llvm36'
 brew 'homebrew/versions/llvm37'
 
+brew 'valgrind'
+
 brew 'gimp'
