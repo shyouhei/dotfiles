@@ -1,5 +1,5 @@
 ;; custom
-(setq custom-file (expand-file-name "~/.emacs.d/elisp/custom.el"))
+(setq custom-file (expand-file-name "~/.emacs.d/site-elisp/custom.el"))
 
 ;; whoami
 (setq user-full-name "URABE Shyouhei")
