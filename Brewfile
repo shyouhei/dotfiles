@@ -106,5 +106,6 @@ brew 'homebrew/versions/llvm36'
 brew 'homebrew/versions/llvm37'
 
 brew 'valgrind'
+brew 'jemalloc'
 
 brew 'gimp'
