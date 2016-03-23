@@ -10,7 +10,7 @@ function ssh_in_tmux() {
 
     [[ -z $1    ]] && 1=bash
 
-    tmux new-window -t "$host" ssh -At "$host" "$@"
+    tmux new-window -n "$host" ssh -At "$host" "$@"
 }
 
 function() {
