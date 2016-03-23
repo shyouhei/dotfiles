@@ -54,6 +54,8 @@ brew 'hub'
 
 brew 'go'
 brew 'ghq'
+brew 'docker' # depends golang
+brew 'docker-machine'
 
 brew 'gnu-tar'
 brew 'gnu-sed'
@@ -104,6 +106,10 @@ brew 'llvm'
 brew 'homebrew/versions/llvm35'
 brew 'homebrew/versions/llvm36'
 brew 'homebrew/versions/llvm37'
+
+brew 'ctags'
+brew 'global'
+brew 'gdb'
 
 brew 'valgrind'
 brew 'jemalloc'
