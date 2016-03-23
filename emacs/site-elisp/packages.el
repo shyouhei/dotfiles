@@ -5,10 +5,11 @@
 (add-to-list 'package-archives '("user42" . "http://download.tuxfamily.org/user42/elpa/packages/"))
 
 (package-initialize)
+
+(package-install 'use-package)
 (eval-when-compile
   (require 'use-package))
 
-(package-install 'use-package)
 (package-install 'diminish)
 (use-package use-package
   :init
@@ -23,6 +24,12 @@
 
 (package-install 'paradox)
 (use-package paradox :init (setq paradox-github-token t))
+
+(package-install 'exec-path-from-shell)
+(use-package exec-path-from-shell
+  :if     (memq window-system '(mac ns))
+  :init   (setenv "SHELL" "/usr/local/bin/zsh")
+  :config (exec-path-from-shell-initialize))
 
 (package-install 'ruby-mode)
 (package-install 'yard-mode)
@@ -146,20 +153,16 @@
    ("\\.mkdn$" . markdown-mode)
    ("\\.md$" . markdown-mode)))
 
-(package-install 'gtags)
-(use-package gtags
-  :defer t
-  :diminish "G"
+(package-install 'ggtags)
+(use-package ggtags
+  :commands ggtags-mode
+  :diminish "GG"
   :init
   (progn
-    (add-hook 'gtags-mode-hook
-              (lambda ()
-                (local-set-key "\M-f" 'gtags-find-tag)    ; override etags
-                (local-set-key "\M-r" 'gtags-find-rtag)   ; reverse tag
-                (local-set-key "\M-s" 'gtags-find-symbol) ; find
-                (local-set-key "\C-t" 'gtags-pop-stack))) ; pop
-    ;; C-mode forces gtags
-    (add-hook 'c-mode-common-hook (lambda () (gtags-mode 1)))))
+    (add-hook 'c-mode-common-hook
+	      (lambda ()
+		(when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+		  (ggtags-mode 1))))))
 
 (package-install 'w3m)
 (use-package w3m
