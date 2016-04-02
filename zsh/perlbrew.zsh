@@ -2,4 +2,4 @@
 
 typeset -gx PERLBREW_ROOT=$HOME/data/perlbrew
 
-source $PERLBREW_ROOT/etc/bashrc
+[[ -x $PERLBREW_ROOT/etc/bashrc ]] && source $PERLBREW_ROOT/etc/bashrc
