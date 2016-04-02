@@ -1,4 +1,4 @@
 #! /bin/zsh
 
 autoload -Uz run-help
-typeset -g HELPDIR=/usr/local/share/zsh/help(N-/)
+[[ -d  HELPDIR=/usr/local/share/zsh/help ]] && typeset -g HELPDIR=/usr/local/share/zsh/help
