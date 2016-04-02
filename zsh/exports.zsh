@@ -1,22 +1,22 @@
 #! /bin/zsh
 
 function() {
-    typeset -Ua editors=(nvim vim vi emacs nano)
-    typeset -Ua pagers=(lv less w3m more)
+    typeset -Ua editors; editors=(nvim vim vi emacs nano)
+    typeset -Ua pagers; pagers=(lv less w3m more)
 
     # grab default $PATH
     has_a /usr/libexec/path_helper && eval $(env -i PATH=$PATH MANPATH=$MANPATH /usr/libexec/path_helper)
 
     # (N-/) is handy so $path is set instead of $PATH
     # /sbin etc. are filtered out later.
-    typeset -gUa path=(
+    typeset -gUa path; path=(
         $HOME/bin(N-/)
-        $HOME/Library/Python/*/bin(N-/)
+        $HOME/Library/Python/*/bin
         /usr/texbin(N-/)
         /opt/local/bin(N-/)
         /opt/csw/bin(N-/)
         /usr/sfw/bin(N-/)
-        /usr/local/opt/*/libexec/gnubin(N-/)
+        /usr/local/opt/*/libexec/gnubin
         /usr/local/bin(N-/)
         /usr/pkg/bin(N-/)
         /usr/X11R6/bin(N-/)
@@ -29,14 +29,14 @@ function() {
         /sbin
         $path
     )
-    local sbins=$(filter '[[ $1 =~ sbin ]]' $path | map '$1:A')
-    local bins=$(filter '[[ ! $1 =~ sbin ]]' $path | map '$1:A')
+    local sbins="$(filter '[[ $1 =~ sbin ]]' $path | map '$1:A')"
+    local bins="$(filter '[[ ! $1 =~ sbin ]]' $path | map '$1:A')"
 
     typeset -gxT SUDO_PATH sudo_path
-    typeset -gUa sudo_path=(${(f)sbins})
+    typeset -gUa sudo_path; sudo_path=(${(f)sbins})
     path=(${(f)bins})
 
-    typeset -gUa manpath=(
+    typeset -gUa manpath; manpath=(
          /usr/local/opt/*/libexec/gnuman(N-/)
          /opt/local/share/man(N-/)
          /opt/csw/share/man(N-/)
