@@ -11,12 +11,12 @@ function() {
     # /sbin etc. are filtered out later.
     typeset -gUa path; path=(
         $HOME/bin(N-/)
-        $HOME/Library/Python/*/bin
+        $HOME/Library/Python/*/bin(N-/)
         /usr/texbin(N-/)
         /opt/local/bin(N-/)
         /opt/csw/bin(N-/)
         /usr/sfw/bin(N-/)
-        /usr/local/opt/*/libexec/gnubin
+        /usr/local/opt/*/libexec/gnubin(N-/)
         /usr/local/bin(N-/)
         /usr/pkg/bin(N-/)
         /usr/X11R6/bin(N-/)
