@@ -94,6 +94,7 @@ brew 'emacs', args: ['with-cocoa']
 brew 'gnuplot', args: ['with-pdflib-lite', 'with-wxmac']
 brew 'graphviz', args: ['with-gts']
 brew 'imagemagick'
+brew 'ghostscript'
 brew 'wireshark'
 
 brew 'sanemat/font/ricty', args: ['powerline']
