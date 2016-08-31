@@ -142,3 +142,6 @@ $RECYCLE.BIN/
 *.msp
 *.lnk
 
+*.i
+*.s
+*.o
