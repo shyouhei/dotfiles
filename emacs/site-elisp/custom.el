@@ -5,7 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
    (quote
-    ((change-log-indent-text . 2)
+    ((c-doc-comment-style . javadoc)
+     (change-log-indent-text . 2)
      (add-log-time-format lambda nil
 			  (let*
 			      ((time
