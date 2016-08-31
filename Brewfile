@@ -92,7 +92,7 @@ brew 'ruby-build'
 
 brew 'emacs', args: ['with-cocoa']
 brew 'gnuplot', args: ['with-pdflib-lite', 'with-wxmac']
-brew 'graphviz'
+brew 'graphviz', args: ['with-gts']
 brew 'imagemagick'
 brew 'wireshark'
 
