@@ -45,7 +45,7 @@ brew 'moreutils', args: ['without-parallel']
 brew 'parallel', args: ['force'] # works
 
 brew 'cvs'
-brew 'subversion'
+brew 'subversion', args: ['with-ruby']
 # brew 'hg'
 # brew 'bzr'
 brew 'git'
