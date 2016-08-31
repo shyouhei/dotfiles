@@ -1,5 +1,6 @@
 (require 'package)
 
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("user42" . "http://download.tuxfamily.org/user42/elpa/packages/"))
@@ -222,3 +223,6 @@
 ;; M-x woman
 (package-install 'woman)
 (use-package woman :config (setq woman-cache-filename (expand-file-name "~/.emacs.d/woman-cache")))
+
+(package-install 'htmlize)
+(use-package htmlize)
