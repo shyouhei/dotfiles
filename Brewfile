@@ -41,6 +41,7 @@ brew 'homebrew/dupes/screen' # build-depends automake -> xz
 brew 'tmux'
 brew 'cmatrix'
 
+brew 'gnu-time'
 brew 'coreutils'
 brew 'moreutils', args: ['without-parallel']
 brew 'parallel', args: ['force'] # works
