@@ -17,6 +17,7 @@ tap 'sanemat/font'
 
 brew 'openssl'
 brew 'libressl'
+brew 'gpg'
 
 brew 'xz'
 brew 'pixz'
