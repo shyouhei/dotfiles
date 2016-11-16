@@ -73,6 +73,7 @@ brew 'zsh-syntax-highlighting'
 
 brew 'homebrew/dupes/less' # depends pcre
 
+brew 'q'
 brew 'sl'
 brew 'tree'
 brew 'lv'
