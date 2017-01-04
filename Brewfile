@@ -50,7 +50,10 @@ brew 'cvs'
 brew 'subversion', args: ['with-ruby']
 # brew 'hg'
 # brew 'bzr'
-brew 'git'
+brew 'git', args: %w[
+  with-brewed-curl with-brewed-openssl with-brewed-svn
+  with-blk-sha1 with-gettext with-pcre
+]
 brew 'gist'
 brew 'hub'
 
