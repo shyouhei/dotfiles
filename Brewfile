@@ -102,6 +102,7 @@ brew 'graphviz', args: ['with-gts']
 brew 'imagemagick'
 brew 'ghostscript'
 brew 'wireshark'
+brew 'ffmpeg'
 
 brew 'sanemat/font/ricty', args: ['powerline']
 brew 'reattach-to-user-namespace'
