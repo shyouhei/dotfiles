@@ -96,7 +96,7 @@ brew 'ruby-build'
 # brew 'rabbitmq'
 # brew 'redis'
 
-# brew 'emacs', args: ['with-cocoa']
+brew 'emacs', args: ['with-cocoa']
 brew 'gnuplot', args: ['with-pdflib-lite', 'with-wxmac']
 brew 'graphviz', args: ['with-gts']
 brew 'imagemagick'
