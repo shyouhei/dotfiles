@@ -46,6 +46,8 @@ link $etc/pry/init ~/.pryrc
 link $etc/irb/init ~/.irbrc
 link $etc/tmux/tmux.conf ~/.tmux.conf
 link $etc/tmux ~/.tmux
+link $etc/wget/hists ~/.wget-hsts
+link $etc/parallel ~/.parallel
 
 # CF: http://stackoverflow.com/questions/32418438
 if [[ -d ~/.bash_sessions ]]; then
