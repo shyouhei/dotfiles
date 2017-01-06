@@ -22,9 +22,9 @@ zplug b4b4r07/emoji-cli, if:'[[ whence jq >/dev/null ]]'
 zplug zsh-users/zsh-autosuggestions
 zplug zsh-users/zsh-completions
 zplug zsh-users/zsh-history-substring-search
-zplug zsh-users/zsh-syntax-highlighting, nice:10
-zplug zsh-users/zaw, nice:10
-zplug mrowa44/emojify, as:command, of:emojify
+zplug zsh-users/zsh-syntax-highlighting, defer:2
+zplug zsh-users/zaw, defer:2
+zplug mrowa44/emojify, as:command, use:emojify
 zplug djui/alias-tips
 zplug willghatch/zsh-cdr
 zplug Tarrasch/zsh-functional
