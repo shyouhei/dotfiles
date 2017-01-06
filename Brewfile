@@ -43,6 +43,7 @@ brew 'cmatrix'
 
 brew 'gnu-time'
 brew 'coreutils'
+brew 'findutils'
 brew 'moreutils', args: ['without-parallel']
 brew 'parallel', args: ['force'] # works
 
