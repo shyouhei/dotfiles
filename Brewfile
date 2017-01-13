@@ -108,6 +108,7 @@ brew 'ffmpeg'
 brew 'sanemat/font/ricty', args: ['powerline']
 brew 'reattach-to-user-namespace'
 
+brew 'binutils' # gobjdump etc.
 brew 'gcc@4.9'
 brew 'gcc@5'
 brew 'gcc@6'
