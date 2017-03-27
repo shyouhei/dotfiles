@@ -30,7 +30,7 @@ function() {
         $path
     )
     local sbins="$(filter '[[ $1 =~ sbin ]]' $path | map '$1:A')"
-    local bins="$(filter '[[ ! $1 =~ sbin ]]' $path | map '$1:A')"
+    local bins="$(filter '[[ ! $1 =~ sbin ]]' $path)"
 
     typeset -gxT SUDO_PATH sudo_path
     typeset -gUa sudo_path; sudo_path=(${(f)sbins})
