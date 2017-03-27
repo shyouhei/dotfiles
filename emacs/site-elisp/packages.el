@@ -163,7 +163,9 @@
     (add-hook 'c-mode-common-hook
 	      (lambda ()
 		(when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
-		  (ggtags-mode 1))))))
+		  (ggtags-mode 1))))
+    ;; use helm
+    (setq ggtags-completing-read-function nil)))
 
 (package-install 'w3m)
 (use-package w3m
@@ -192,7 +194,12 @@
     (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)))
 
 (package-install 'company)
-(use-package company :config (add-hook 'after-init-hook 'global-company-mode))
+(use-package company
+  :config
+  (progn
+    (add-hook 'after-init-hook 'global-company-mode)
+    (setq company-backends (delete 'company-semantic company-backends))
+    (setq company-backends (delete 'company-clang    company-backends))))
 
 ;; Emacs built-in
 (use-package windmove
