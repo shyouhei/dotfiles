@@ -125,3 +125,11 @@ brew 'valgrind'
 brew 'jemalloc'
 
 # brew 'gimp'
+
+brew 'node'
+brew 'homebrew/php/php71'
+brew 'python3'
+brew 'ghc'
+
+brew 'phantomjs'
+brew 'chromedriver'
