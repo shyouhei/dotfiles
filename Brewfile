@@ -115,6 +115,7 @@ brew 'gcc'
 brew 'llvm'
 brew 'llvm@3.7'
 brew 'llvm@3.8'
+brew 'llvm@3.9'
 
 brew 'ctags'
 brew 'global'
