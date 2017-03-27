@@ -15,6 +15,7 @@ unsetopt glob_dots
   setopt hist_expand
   setopt hist_ignore_all_dups
   setopt hist_ignore_space
+  setopt hist_fcntl_lock
   setopt hist_save_nodups
   setopt hist_verify
   setopt ignoreeof
