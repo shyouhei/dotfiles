@@ -13,11 +13,23 @@ function ssh_in_tmux() {
     tmux new-window -n "$host" ssh -At "$host" "$@"
 }
 
+function ghq_in_tmux() {
+    case $1 in
+        look)
+            noglob tmux new-window -n "$2" -- ghq "$@"
+            ;;
+        *)
+            command ghq "$@"
+            ;;
+    esac
+}
+
 function() {
     [[ -n $TMUX ]] || return
 
     local i
     alias ssh=ssh_in_tmux
+    alias ghq=ghq_in_tmux
 
     compdef _env tmux_fulltitle
 
