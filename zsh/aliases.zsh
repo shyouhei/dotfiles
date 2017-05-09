@@ -9,3 +9,9 @@ alias zln='noglob zmv -W -L'
 # vim-ish
 alias :q='exit'
 alias :e=$EDITOR
+
+case $(whence lldb) in
+    /usr/bin/lldb)
+	alias lldb='env PATH=/usr/bin:$PATH lldb'
+	;;
+esac
