@@ -111,6 +111,7 @@ brew 'reattach-to-user-namespace'
 brew 'binutils' # gobjdump etc.
 brew 'gcc@4.9'
 brew 'gcc@5'
+brew 'gcc@6'
 brew 'gcc'
 brew 'llvm'
 brew 'llvm@3.7'
