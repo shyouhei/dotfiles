@@ -25,19 +25,19 @@ brew 'pigz'
 
 brew 'gettext'
 brew 'readline'
-brew 'homebrew/dupes/ncurses'
-brew 'homebrew/dupes/zlib'
+brew 'ncurses'
+brew 'zlib'
 
-brew 'homebrew/dupes/gzip'
-brew 'homebrew/dupes/lsof'
-brew 'homebrew/dupes/make'
-brew 'homebrew/dupes/openssh'
-brew 'homebrew/dupes/rsync'
+brew 'gzip'
+brew 'lsof'
+brew 'make'
+brew 'openssh'
+brew 'rsync'
 
-brew 'homebrew/dupes/libpcap'
-brew 'homebrew/dupes/tcpdump'
+brew 'libpcap'
+brew 'tcpdump'
 
-brew 'homebrew/dupes/screen' # build-depends automake -> xz
+brew 'screen' # build-depends automake -> xz
 brew 'tmux'
 brew 'cmatrix'
 
@@ -75,7 +75,7 @@ brew 'zsh'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
-brew 'homebrew/dupes/less' # depends pcre
+brew 'less' # depends pcre
 
 brew 'q'
 brew 'sl'
