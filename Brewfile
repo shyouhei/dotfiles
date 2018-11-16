@@ -44,8 +44,8 @@ brew 'cmatrix'
 brew 'gnu-time'
 brew 'coreutils'
 brew 'findutils'
-brew 'moreutils', args: ['without-parallel']
-brew 'parallel', args: ['force'] # works
+# brew 'moreutils', args: ['without-parallel']
+brew 'parallel' #, args: ['force'] # works
 
 brew 'cvs'
 brew 'subversion', args: ['with-ruby']
@@ -58,17 +58,17 @@ brew 'git', args: %w[
 brew 'gist'
 brew 'hub'
 
-brew 'go'
+# brew 'go'
 brew 'ghq'
-brew 'docker' # depends golang
-brew 'docker-machine'
+# brew 'docker' # depends golang
+# brew 'docker-machine'
 
 brew 'gnu-tar'
 brew 'gnu-sed'
 brew 'gawk'
 
 brew 'jq'
-brew 'python'
+# brew 'python'
 # brew 'powerline'
 brew 'pcre'
 brew 'zsh'
@@ -102,21 +102,25 @@ brew 'gnuplot', args: ['with-pdflib-lite', 'with-wxmac']
 brew 'graphviz', args: ['with-gts']
 brew 'imagemagick'
 brew 'ghostscript'
-brew 'wireshark'
+# brew 'wireshark'
 brew 'ffmpeg'
 
-brew 'sanemat/font/ricty', args: ['powerline']
-brew 'reattach-to-user-namespace'
+# brew 'sanemat/font/ricty', args: ['powerline']
+# brew 'reattach-to-user-namespace'
 
 brew 'binutils' # gobjdump etc.
 brew 'gcc@4.9'
 brew 'gcc@5'
 brew 'gcc@6'
+brew 'gcc@7'
 brew 'gcc'
-brew 'llvm'
-brew 'llvm@3.7'
-brew 'llvm@3.8'
+#brew 'llvm@3.7'
+#brew 'llvm@3.8'
 brew 'llvm@3.9'
+brew 'llvm@4'
+brew 'llvm@5'
+brew 'llvm@6'
+brew 'llvm'
 
 brew 'ctags'
 brew 'global'
@@ -127,10 +131,11 @@ brew 'jemalloc'
 
 # brew 'gimp'
 
-brew 'node'
-brew 'homebrew/php/php71'
-brew 'python3'
-brew 'ghc'
+# brew 'node'
+# brew 'homebrew/php/php71'
+# brew 'python3'
+# brew 'ghc'
+# brew 'rust'
 
-brew 'phantomjs'
-brew 'chromedriver'
+# brew 'phantomjs'
+# brew 'chromedriver'
