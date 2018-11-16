@@ -123,7 +123,7 @@
 ;; (set-input-method "japanese-anthy")
 ;; (set-input-method "japanese-prime")
 
-(set-language-environment 'Japanese)
+;; (set-language-environment 'Japanese)
 ;; (set-default-coding-systems 'euc-jp-unix)
 ;; (set-buffer-file-coding-system 'euc-jp-unix)
 ;; (set-terminal-coding-system 'utf-8)
@@ -180,4 +180,8 @@
                    '(vertical-scroll-bars . nil)
                    ;; '(alpha . 65)
                    )
+             ;; (list '(foreground-color . "white")
+             ;;       '(background-color . "black")
+             ;;       '(vertical-scroll-bars . nil)
+             ;;       )
              default-frame-alist))))

@@ -5,15 +5,13 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (htmlize woman ansi-color tty-format company helm mic-paren
-     w3m ggtags markdown-mode yaml-mode haml-mode slim-mode
-     go-mode csharp-mode coffee-mode haskell-mode php-mode
-     perl-mode electric-spacing ruby-electric ruby-block rbenv
-     yard-mode ruby-mode exec-path-from-shell paradox diminish
-     use-package)))
+    (cmake-font-lock cmake-mode magit editorconfig htmlize woman ansi-color tty-format company helm mic-paren w3m ggtags markdown-mode yaml-mode haml-mode slim-mode go-mode csharp-mode coffee-mode haskell-mode php-mode perl-mode electric-spacing ruby-electric ruby-block rbenv yard-mode ruby-mode exec-path-from-shell paradox diminish use-package)))
  '(safe-local-variable-values
    (quote
-    ((style . ruby)
+    ((eval add-hook
+	   (quote before-save-hook)
+	   (quote time-stamp))
+     (style . ruby)
      (c-doc-comment-style . javadoc)
      (change-log-indent-text . 2)
      (add-log-time-format lambda

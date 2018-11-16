@@ -154,6 +154,9 @@
    ("\\.mkdn$" . markdown-mode)
    ("\\.md$" . markdown-mode)))
 
+(package-install 'cmake-mode)
+(use-package cmake-mode :mode "^CMakeList\\.txt$")
+
 (package-install 'ggtags)
 (use-package ggtags
   :commands ggtags-mode
@@ -233,3 +236,9 @@
 
 (package-install 'htmlize)
 (use-package htmlize)
+
+(package-install 'editorconfig)
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
