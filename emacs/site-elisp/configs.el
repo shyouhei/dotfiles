@@ -159,7 +159,8 @@
 	    (c-toggle-hungry-state 1)
 	    (setq indent-tabs-mode nil)
 	    (setq c-basic-offset 4)
-	    (add-to-list 'electric-layout-rules '(?{ . after))))
+	    ;; (add-to-list 'electric-layout-rules '(?{ . after))))
+	    ))
 
 (global-set-key "\C-m" 'newline-and-indent)
 (global-set-key "\C-j" 'newline)
