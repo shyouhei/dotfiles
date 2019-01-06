@@ -1,9 +1,9 @@
 (require 'package)
 
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("user42" . "http://download.tuxfamily.org/user42/elpa/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("user42" . "https://download.tuxfamily.org/user42/elpa/packages/"))
 
 (package-initialize)
 
@@ -211,8 +211,8 @@
     (windmove-default-keybindings)
     (setq windmove-wrap-around t)))
 
-(package-install 'tty-format)
-(use-package tty-format :config (add-hook 'find-file-hooks 'tty-format-guess))
+;;(package-install 'tty-format)
+;;(use-package tty-format :config (add-hook 'find-file-hooks 'tty-format-guess))
 
 (package-install 'ansi-color)
 (use-package ansi-color
