@@ -2,4 +2,5 @@ abbrev_defs
 auto-saves-alist/
 backups/
 elpa/
+var/
 recentf
