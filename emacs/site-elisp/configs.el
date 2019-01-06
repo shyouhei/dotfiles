@@ -169,8 +169,8 @@
 
 (if window-system
     (progn
-      (set-face-attribute 'default nil :family "Ricty" :height 140)
-      (set-fontset-font "fontset-default" 'japanese-jisx0208 '("Ricty" . "iso10646-*"))
+      (set-face-attribute 'default nil :family "Ricty Diminished" :height 120)
+      (set-fontset-font "fontset-default" 'japanese-jisx0208 '("Ricty Diminished" . "iso10646-*"))
       (setq default-frame-alist
             (append
              (list '(foreground-color . "black")
