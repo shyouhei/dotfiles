@@ -3,7 +3,12 @@
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("user42" . "https://download.tuxfamily.org/user42/elpa/packages/"))
+
+;; Enabling below requires GPG key setup
+;; % wget https://user42.tuxfamily.org/user42_kevin.gpg.asc
+;; then, M-x package-import-keyring
+
+;; (add-to-list 'package-archives '("user42" . "https://download.tuxfamily.org/user42/elpa/packages/"))
 
 (package-initialize)
 
