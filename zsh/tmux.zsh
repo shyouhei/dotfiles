@@ -36,7 +36,6 @@ function() {
     local -a commands=(
         man info w3m \
         htop top \
-        sudo \
         emacs emacs-snapshot vim vi nano sudoedit \
         scim \
         gnuplot irb irb1.8 gosh python ghci ocaml
