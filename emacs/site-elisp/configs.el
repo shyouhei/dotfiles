@@ -138,6 +138,7 @@
 (setq file-name-coding-system 'utf-8-mac)
 (set-clipboard-coding-system 'utf-8-unix)
 (setq default-process-coding-system '(undecided . utf-8-unix))
+(setq ispell-local-dictionary "en_GB") ;; makes no sense to set ja_JP
 
 (dolist (h '(emacs-lisp-mode-hook
 	     c-mode-common-hook
