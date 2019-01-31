@@ -271,4 +271,5 @@
                              tab-mark
                              ))
     (set-face-background 'whitespace-newline 'nil)
-    (set-face-background 'whitespace-space 'nil)))
+    (set-face-background 'whitespace-space 'nil)
+    (set-face-foreground 'whitespace-space "RGB:44/44/44")))
