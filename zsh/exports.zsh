@@ -50,5 +50,6 @@ function() {
     typeset -gx PAGER=$(filter 'has_a $@' $pagers | head -n1)
     typeset -gx CVS_RSH=ssh
     typeset -gx GOPATH=~/data/src
+    typeset -gx DOCKER_BUILDKIT=1
 }
 
