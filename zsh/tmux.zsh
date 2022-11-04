@@ -16,7 +16,8 @@ function ssh_in_tmux() {
 function ghq_in_tmux() {
     case $1 in
         look)
-            noglob tmux new-window -n "$2" -- ghq "$@"
+            shift 1
+            noglob tmux new-window -n "$1" -- ghq get --look "$@"
             ;;
         *)
             command ghq "$@"
