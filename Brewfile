@@ -8,134 +8,57 @@
 ENV['HOMEBREW_MAKE_JOBS'] = '5'
 
 tap 'homebrew/bundle'
+tap 'homebrew/cask'
 tap 'homebrew/command-not-found'
-tap 'homebrew/dupes'
-tap 'homebrew/versions'
-tap 'sanemat/font'
-
-# the list is dependency-sorted
-
-brew 'openssl'
-brew 'libressl'
-brew 'gpg'
+tap 'homebrew/core'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/services'
 
 brew 'xz'
-brew 'pixz'
-brew 'pigz'
-
+brew 'awscli'
 brew 'gettext'
-brew 'readline'
-brew 'ncurses'
-brew 'zlib'
-
-brew 'gzip'
-brew 'lsof'
-brew 'make'
-brew 'openssh'
-brew 'rsync'
-
-brew 'libpcap'
-brew 'tcpdump'
-
-brew 'screen' # build-depends automake -> xz
-brew 'tmux'
-brew 'cmatrix'
-
-brew 'gnu-time'
+brew 'circleci'
 brew 'coreutils'
 brew 'findutils'
-# brew 'moreutils', args: ['without-parallel']
-brew 'parallel' #, args: ['force'] # works
-
-brew 'cvs'
-brew 'subversion', args: ['with-ruby']
-# brew 'hg'
-# brew 'bzr'
-brew 'git', args: %w[
-  with-brewed-curl with-brewed-openssl with-brewed-svn
-  with-blk-sha1 with-gettext with-pcre
-]
-brew 'gist'
-brew 'hub'
-
-# brew 'go'
-brew 'ghq'
-# brew 'docker' # depends golang
-# brew 'docker-machine'
-
-brew 'gnu-tar'
-brew 'gnu-sed'
 brew 'gawk'
-
+brew 'ghq'
+brew 'gist'
+brew 'git'
+brew 'gitlab-runner', restart_service: true
+brew 'gnu-sed'
+brew 'gnu-tar'
+brew 'gnu-time'
+brew 'gnupg'
+brew 'grep'
+brew 'gzip'
+brew 'hub'
 brew 'jq'
-# brew 'python'
-# brew 'powerline'
+brew 'keychain'
+brew 'less'
+brew 'lsof'
+brew 'lv'
+brew 'make'
+brew 'mas'
+brew 'nkf'
+brew 'openssh'
+brew 'parallel'
 brew 'pcre'
+brew 'pigz'
+brew 'pixz'
+brew 'pstree'
+brew 'q'
+brew 'ruby-build'
+brew 'rbenv'
+brew 'rsync'
+brew 'sl'
+brew 'tmux'
+brew 'tree'
+brew 'wget'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
-brew 'less' # depends pcre
+cask 'session-manager-plugin'
 
-brew 'q'
-brew 'sl'
-brew 'tree'
-brew 'lv'
-brew 'nkf'
-brew 'wget'
-brew 'htop'
-brew 'ispell'
-brew 'keychain'
-brew 'pstree'
-
-brew 'rbenv'
-brew 'ruby-build'
-
-# brew 'mysql'
-# brew 'memcached'
-# brew 'mongodb'
-# brew 'rabbitmq'
-# brew 'redis'
-
-brew 'emacs', args: ['with-cocoa']
-brew 'gnuplot', args: ['with-pdflib-lite', 'with-wxmac']
-brew 'graphviz', args: ['with-gts']
-brew 'imagemagick'
-brew 'ghostscript'
-# brew 'wireshark'
-brew 'ffmpeg'
-
-# brew 'sanemat/font/ricty', args: ['powerline']
-# brew 'reattach-to-user-namespace'
-
-brew 'binutils' # gobjdump etc.
-brew 'gcc@4.9'
-brew 'gcc@5'
-brew 'gcc@6'
-brew 'gcc@7'
-brew 'gcc'
-#brew 'llvm@3.7'
-#brew 'llvm@3.8'
-brew 'llvm@3.9'
-brew 'llvm@4'
-brew 'llvm@5'
-brew 'llvm@6'
-brew 'llvm'
-
-brew 'ctags'
-brew 'global'
-brew 'gdb'
-
-brew 'valgrind'
-brew 'jemalloc'
-
-# brew 'gimp'
-
-# brew 'node'
-# brew 'homebrew/php/php71'
-# brew 'python3'
-# brew 'ghc'
-# brew 'rust'
-
-# brew 'phantomjs'
-# brew 'chromedriver'
+mas 'Bitwarden', id: 1352778147
+mas 'Slack', id: 803453959
