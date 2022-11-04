@@ -20,3 +20,6 @@
         autocorrect = 30
 [ghq]
         root = ~/data/src
+[user]
+        name = 卜部昌平
+	email = shyouhei@ruby-lang.org
