@@ -5,3 +5,4 @@ rbenv/
 subversion/
 wireshark/
 inkscape/
+Brewfile.lock.json
