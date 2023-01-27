@@ -13,6 +13,7 @@ tap 'homebrew/command-not-found'
 tap 'homebrew/core'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/services'
+tap 'mike-engel/jwt-cli'
 
 brew 'xz'
 brew 'awscli'
@@ -35,6 +36,7 @@ brew 'hub'
 brew 'jq'
 brew 'keychain'
 brew 'less'
+brew 'libyaml'
 brew 'lsof'
 brew 'lv'
 brew 'make'
@@ -58,7 +60,25 @@ brew 'zsh'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
+brew 'mike-engel/jwt-cli/jwt-cli'
+
+cask 'font-inconsolata'
+cask 'font-noto-sans'
+cask 'font-noto-serif'
+
+cask 'discord'
+cask 'docker'
+cask 'dropbox'
+cask 'firefox'
+cask 'gimp'
+cask 'google-chrome'
+cask 'keepingyouawake'
+cask 'rustdesk'
 cask 'session-manager-plugin'
+cask 'slack'
+cask 'visual-studio-code'
+cask 'zoom'
+
 
 mas 'Bitwarden', id: 1352778147
 mas 'Slack', id: 803453959
