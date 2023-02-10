@@ -78,7 +78,7 @@ cask 'session-manager-plugin'
 cask 'slack'
 cask 'visual-studio-code'
 cask 'zoom'
-
+cask 'emacs'
 
 mas 'Bitwarden', id: 1352778147
 mas 'Slack', id: 803453959
