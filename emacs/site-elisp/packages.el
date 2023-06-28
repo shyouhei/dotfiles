@@ -37,6 +37,9 @@
   :init   (setenv "SHELL" "/usr/local/bin/zsh")
   :config (exec-path-from-shell-initialize))
 
+(package-install 'rust-mode)
+(use-package rust-mode :mode "\\.rs$")
+
 (package-install 'ruby-mode)
 (package-install 'yard-mode)
 (package-install 'rbenv)
