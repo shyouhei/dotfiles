@@ -14,7 +14,6 @@ function() {
         $HOME/Library/Python/*/bin(N-/)
         /usr/texbin(N-/)
         /opt/local/bin(N-/)
-        /opt/homebrew/bin(N-/)
         /opt/csw/bin(N-/)
         /usr/sfw/bin(N-/)
         /usr/local/opt/*/libexec/gnubin(N-/)
@@ -24,7 +23,6 @@ function() {
         /usr/bin
         /usr/games(N-/)
         /bin
-        /opt/homebrew/sbin(N-/)
         /usr/local/sbin(N-/)
         /usr/pkg/sbin(N-/)
         /usr/sbin
