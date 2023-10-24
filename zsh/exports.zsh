@@ -17,6 +17,7 @@ function() {
         /opt/local/bin(N-/)
         /opt/csw/bin(N-/)
         /usr/sfw/bin(N-/)
+        /opt/homebrew/opt/*/libexec/gnubin(N-/)
         /usr/local/opt/*/libexec/gnubin(N-/)
         /usr/local/bin(N-/)
         /usr/pkg/bin(N-/)

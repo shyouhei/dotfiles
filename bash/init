@@ -9,3 +9,7 @@ export RBENV_ROOT=$XDG_CONFIG_HOME/rbenv
 if [ -d ~/Library/Python/*/bin ]; then
     export PATH=$(echo ~/Library/Python/*/bin):$PATH
 fi
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/shyouhei/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
