@@ -12,6 +12,7 @@ function() {
     typeset -gUa path; path=(
         $HOME/bin(N-/)
         $HOME/Library/Python/*/bin(N-/)
+        $HOME/.rd/bin(N-/)
         /usr/texbin(N-/)
         /opt/local/bin(N-/)
         /opt/csw/bin(N-/)
