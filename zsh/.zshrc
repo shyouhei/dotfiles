@@ -27,6 +27,7 @@
     source $ZDOTDIR/perlbrew.zsh
     source $ZDOTDIR/homebrew.zsh
     source $ZDOTDIR/nodenv.zsh
+    source $ZDOTDIR/direnv.zsh
     source $ZDOTDIR/profiling.zsh   # should be the very last
 
 } always {
