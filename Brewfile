@@ -65,6 +65,8 @@ brew 'zsh-syntax-highlighting'
 
 brew 'mike-engel/jwt-cli/jwt-cli'
 
+cask_args appdir: "~/Applications"
+
 cask 'font-inconsolata'
 cask 'font-noto-sans'
 cask 'font-noto-serif'
