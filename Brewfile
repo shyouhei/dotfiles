@@ -101,3 +101,18 @@ cask 'zoom'
 mas 'Bitwarden', id: 1352778147
 mas 'Slack', id: 803453959
 mas 'Yubico Authenticator', id: 1497506650
+
+vscode 'bradlc.vscode-tailwindcss'
+vscode 'dbaeumer.vscode-eslint'
+vscode 'esbenp.prettier-vscode'
+vscode 'GitHub.vscode-github-actions'
+vscode 'golang.Go'
+vscode 'GraphQL.vscode-graphql'
+vscode 'HashiCorp.terraform'
+vscode 'ms-azuretools.vscode-docker'
+vscode 'ms-vscode-remote.remote-containers'
+vscode 'ms-vscode.makefile-tools'
+vscode 'redhat.vscode-yaml'
+vscode 'Shopify.ruby-lsp'
+vscode 'Vue.volar'
+vscode 'Vue.vscode-typescript-vue-plugin'
