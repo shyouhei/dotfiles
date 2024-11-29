@@ -82,6 +82,7 @@ cask 'font-inconsolata'
 cask 'font-noto-sans'
 cask 'font-noto-serif'
 
+cask 'bitwarden'
 cask 'discord'
 cask 'docker'
 cask 'dropbox'
@@ -93,13 +94,11 @@ cask 'keepingyouawake'
 cask 'mysqlworkbench'
 cask 'rustdesk'
 cask 'session-manager-plugin'
+cask 'slack'
 cask 'visual-studio-code'
+cask 'yubico-authenticator'
 cask 'wireshark' # or 'wireshark-chmodbpf'
 cask 'zoom'
-
-mas 'Bitwarden', id: 1352778147
-mas 'Slack', id: 803453959
-mas 'Yubico Authenticator', id: 1497506650
 
 vscode 'bradlc.vscode-tailwindcss'
 vscode 'dbaeumer.vscode-eslint'
