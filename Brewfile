@@ -2,7 +2,7 @@
 # -*- mode: ruby; coding: utf-8 -*-
 
 # As far as I read the implementation of brew bundle, this file is
-# `instane_eval`ed.  Feel free to write any dangerous ruby things
+# `instance_eval`ed.  Feel free to write any dangerous ruby things
 # here.
 
 ENV['HOMEBREW_MAKE_JOBS'] = '5'
