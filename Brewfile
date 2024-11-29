@@ -100,6 +100,8 @@ cask 'yubico-authenticator'
 cask 'wireshark' # or 'wireshark-chmodbpf'
 cask 'zoom'
 
+mas 'TEPRA LINK 2', id: 1614816445
+
 vscode 'bradlc.vscode-tailwindcss'
 vscode 'dbaeumer.vscode-eslint'
 vscode 'esbenp.prettier-vscode'
