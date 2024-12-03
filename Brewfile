@@ -64,6 +64,7 @@ cask 'font-inconsolata'
 cask 'font-noto-sans'
 cask 'font-noto-serif'
 
+cask 'arc'
 cask 'bitwarden'
 cask 'discord'
 cask 'docker'
