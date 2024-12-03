@@ -8,10 +8,7 @@
 ENV['HOMEBREW_MAKE_JOBS'] = '5'
 
 tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
 tap 'homebrew/command-not-found'
-tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'mike-engel/jwt-cli'
 
