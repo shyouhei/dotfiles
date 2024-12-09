@@ -90,19 +90,10 @@ cask 'zoom'
 
 mas 'TEPRA LINK 2', id: 1614816445
 
-vscode 'bradlc.vscode-tailwindcss'
-vscode 'dbaeumer.vscode-eslint'
-vscode 'esbenp.prettier-vscode'
-vscode 'GitHub.vscode-github-actions'
-vscode 'golang.Go'
-vscode 'GraphQL.vscode-graphql'
-vscode 'HashiCorp.terraform'
 vscode 'ms-azuretools.vscode-docker'
 vscode 'ms-vscode-remote.remote-containers'
-vscode 'ms-vscode.makefile-tools'
 vscode 'redhat.vscode-yaml'
-vscode 'Shopify.ruby-lsp'
-vscode 'Vue.volar'
+vscode 'tamasfe.even-better-toml'
 
 __END__
 
