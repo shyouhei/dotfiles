@@ -11,6 +11,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/command-not-found'
 tap 'homebrew/services'
 tap 'mike-engel/jwt-cli'
+tap 'nikitabobko/homebrew-tap'
 
 brew 'coreutils'
 brew 'findutils'
@@ -65,6 +66,7 @@ cask 'font-noto-sans'
 cask 'font-noto-serif'
 
 cask '1password', args: { appdir: "/Applications" }
+cask 'aerospace'
 cask 'arc'
 cask 'asana'
 cask 'bitwarden'
