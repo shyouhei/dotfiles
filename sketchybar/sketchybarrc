@@ -1,0 +1,118 @@
+#! /opt/homebrew/Library/Homebrew/vendor/portable-ruby/current/bin/ruby
+
+require 'json'
+require_relative 'helpers/sbr'
+
+sbr.bar = {
+  position: 'top',
+  height: 30,
+  notch_display_height: 40,
+  y_offset: 0,
+  margin: 0,
+  corner_radius: 0,
+  padding_left: 8,
+  padding_right: 0,
+  blur_radius: 30,
+  color: '0x00e2e2e',
+  border_color: '0xff000000',
+  border_width: 0,
+  font_smoothing: false,
+  shadow: true,
+}
+
+sbr.default = {
+  icon: {
+    font: "SF Pro:Semibold:15.0",
+    color: '0xffffffff',
+    y_offset: -5,
+    padding_left: 3,
+    padding_right: 3,
+  },
+  label: {
+    font: "SF Pro:Semibold:15.0",
+    color: '0xffffffff',
+    y_offset: -5,
+    padding_left: 3,
+    padding_right: 7,
+  },
+  background: {
+    y_offset: -5,
+    padding_left: 0,
+    padding_right: 0,
+    height: 30,
+    color: '0xcc1b1b1f',
+    border_color: '0xff000000',
+    border_width: 1,
+    padding_left: 10,
+    padding_right: 10,
+    corner_radius: 10,
+  },
+  alias: {
+    color: '0xffffffff'
+  }
+}
+
+sbr[:apple] = {
+  is: [:item, :left],
+  set: {
+    icon: [
+      "\u{1008FA}", # apple.logo
+      {
+        padding_left: 10,
+        padding_right: 10,
+      }
+    ],
+    label: { drawing: false },
+    background: {
+      drawing: true,
+      padding_left: 0,
+    }
+  }
+}
+
+sbr[:calendar] = {
+  is: [:item, :right],
+  set: {
+    script: sbr.script_path('calendar.rb'),
+    update_freq: 7,
+    icon: { drawing: false },
+    label: {
+      drawing: true,
+      padding_left: 10,
+      padding_right: 10,
+    },
+    background: {
+      drawing: true,
+      padding_left: 8,
+    }
+  }
+}
+
+sbr[:battery] = {
+  is: [:item, :right],
+  events: [:system_woke, :power_source_change],
+  set: {
+    script: sbr.script_path('battery.rb'),
+    update_freq: 128,
+    label: {
+      drawing: true,
+      padding_left: 0,
+      padding_right: 0,
+    },
+    background: { drawing: false },
+  }
+}
+
+sbr[:rhs] = {
+  is: [:bracket, :battery],
+  set: {
+    background: {
+      drawing: true,
+      height: 30,
+      color: '0xcc1b1b1f',
+      corner_radius: 10,
+    }
+  }
+}
+
+sbr.update

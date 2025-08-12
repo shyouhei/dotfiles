@@ -8,6 +8,7 @@
 ENV['HOMEBREW_MAKE_JOBS'] = '5'
 
 tap 'homebrew/command-not-found'
+tap 'FelixKratz/formulae'
 tap 'mike-engel/jwt-cli'
 tap 'nikitabobko/homebrew-tap'
 
@@ -45,6 +46,7 @@ brew 'pixz'
 brew 'pstree'
 brew 'rsync'
 brew 'shared-mime-info'
+brew 'sketchybar'
 brew 'sl'
 brew 'telnet'
 brew 'tiger-vnc'
@@ -62,6 +64,8 @@ cask_args appdir: "~/Applications"
 cask 'font-inconsolata'
 cask 'font-noto-sans'
 cask 'font-noto-serif'
+cask 'font-sf-pro'
+cask 'sf-symbols'
 
 cask '1password', args: { appdir: "/Applications" }
 cask 'aerospace'
@@ -76,6 +80,7 @@ cask 'filen'
 cask 'firefox'
 cask 'gimp'
 cask 'google-chrome'
+cask 'jordanbaird-ice'
 cask 'keepingyouawake'
 cask 'messenger'
 cask 'microsoft-teams'
