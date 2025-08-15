@@ -29,6 +29,7 @@
     source $ZDOTDIR/nodenv.zsh
     source $ZDOTDIR/cargo.zsh
     source $ZDOTDIR/direnv.zsh
+    source $ZDOTDIR/mise.zsh
     source $ZDOTDIR/profiling.zsh   # should be the very last
 
 } always {
