@@ -48,7 +48,11 @@ function() {
          $manpath
     )
 
-    typeset -gx EDITOR=$(filter 'has_a $@' $editors | head -n1)
+    if has_a code; then
+        typeset -gx EDITOR='code --wait'
+    else
+        typeset -gx EDITOR=$(filter 'has_a $@' $editors | head -n1)
+    fi
     typeset -gx PAGER=$(filter 'has_a $@' $pagers | head -n1)
     typeset -gx CVS_RSH=ssh
     typeset -gx GOPATH=~/data
