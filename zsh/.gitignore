@@ -1,5 +1,6 @@
 # hist file can contain sensitive info
 history
+.zsh_history
 
 # compinit cache file no need to manage
 .zcompdump
