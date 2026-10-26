@@ -214,6 +214,11 @@ shift-down = ['volume set 0', 'mode main']
 if.app-id = 'com.electron.asana'
 run = 'move-node-to-workspace A'
 
+# 1 for AI
+[[on-window-detected]]
+if.app-id = 'com.openai.codex'
+run = 'move-node-to-workspace 1'
+
 # mnemonics B for editors
 
 [[on-window-detected]]
@@ -256,12 +261,23 @@ run = 'move-node-to-workspace E'
 if.app-id = 'org.gnu.Emacs'
 run = 'move-node-to-workspace E'
 
+# mnemonics G for gather
+
+[[on-window-detected]]
+if.app-id = 'com.gather.GatherV2'
+run = 'move-node-to-workspace G'
+
+# mnemonics M for music players
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace M'
+
 # mnemonics N for notepads
 
 [[on-window-detected]]
 if.app-id = 'notion.id'
 run = 'move-node-to-workspace N'
-
 
 # mnemonics P for previews
 
