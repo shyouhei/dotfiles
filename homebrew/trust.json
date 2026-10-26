@@ -1,0 +1,12 @@
+{
+  "trustedcasks": [
+    "nikitabobko/tap/aerospace"
+  ],
+  "trustedformulae": [
+    "felixkratz/formulae/sketchybar",
+    "mike-engel/jwt-cli/jwt-cli"
+  ],
+  "trustedtaps": [
+    "felixkratz/formulae"
+  ]
+}
